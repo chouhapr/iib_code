@@ -3,4 +3,36 @@
   <groupId>com.gpi.esb</groupId>
   <artifactId>Hai</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+       <build>
+            <defaultGoal>package</defaultGoal>
+            <resources>
+                  <resource>
+                        <directory>.</directory>
+                  </resource>
+            </resources>
+            <plugins>
+                  <plugin>
+                        <groupId>ch.sbb.maven.plugins</groupId>
+                        <artifactId>iib-maven-plugin</artifactId>
+                        <version>2.2</version>
+
+                        <configuration>
+                              <toolkitInstallDir>${iib.dir}</toolkitInstallDir>
+                              <barName>${project.build.directory}/iib/${project.artifactId}.bar</barName>
+                              <workspace>${eclipse.workspace}</workspace>
+                              <versionString></versionString>
+                              <cleanBuild>true</cleanBuild>
+                              <deployAsSource>true</deployAsSource>
+                              <esql21>false</esql21>
+                              <applicationName>${project.artifactId}</applicationName>
+                              <configPropFileDirectory>${project_properties}</configPropFileDirectory>
+                              <defaultPropertiesFile>${project.build.directory}/iib/${project.artifactId}.properties</defaultPropertiesFile>
+                              <debugWorkspace>true</debugWorkspace>
+                        </configuration>
+
+                        <extensions>true</extensions>
+                  </plugin>
+            </plugins>
+      </build>
+  
 </project>
