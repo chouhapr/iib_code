@@ -3,15 +3,18 @@
   <groupId>com.gpi.esb</groupId>
   <artifactId>Hai</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-       <build>
-            <defaultGoal>package</defaultGoal>
+  <packaging>iib-bar</packaging>
+  <name>${project.artifactId}</name>
+  
+  <build>
+	<defaultGoal>package</defaultGoal>
             <resources>
                   <resource>
                         <directory>.</directory>
                   </resource>
             </resources>
-            <plugins>
-                  <plugin>
+			<plugins>
+				<plugin>
                         <groupId>ch.sbb.maven.plugins</groupId>
                         <artifactId>iib-maven-plugin</artifactId>
                         <version>1.0</version>
